@@ -263,7 +263,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 object[key] = value;
             });
 
-            fetch('server1.php', {
+            fetch('server.php', {
                     method: "POST",
                     headers: {
                         'Content-type': 'application/json'
@@ -305,4 +305,9 @@ window.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }, 4000);
     }
+
+    fetch('http://localhost:3000/menu')
+    .then(data => data,json())
+    .then(res => console.log(res));
+
 });
